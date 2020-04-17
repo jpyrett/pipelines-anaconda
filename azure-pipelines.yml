@@ -30,4 +30,4 @@ jobs:
     source activate env-from-yaml
     pip install pytest pytest-azurepipelines
     pytest
-      displayName: pytest
+      displayName:pytest
