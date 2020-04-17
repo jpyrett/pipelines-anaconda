@@ -1,6 +1,6 @@
 jobs:
 - job:
-  displayName: From environment.yml
+  displayName: From environment.rafal
   pool:
     vmImage: 'ubuntu-16.04'
   strategy:
