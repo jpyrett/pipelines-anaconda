@@ -37,8 +37,14 @@ jobs:
       cat $(Build.Repository.LocalPath)/requirements.txt
     displayName: Display requirements.txt
 
+  - script: pip install -r $(Build.Repository.LocalPath)/requirements.txt
+    displayName: Install requirements.txt
+
   - bash: |
       source activate env-from-yaml
       pip install pytest pytest-azurepipelines
       pytest
     displayName: pytest
+    
+  - task: PythonScript@0  
+    -script: python src/example.py
