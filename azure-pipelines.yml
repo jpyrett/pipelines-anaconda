@@ -46,4 +46,4 @@ jobs:
       pytest
     displayName: pytest
   
-  - script: python src/example.py
+  - script: python $(Build.Repository.LocalPath)/src/example.py
