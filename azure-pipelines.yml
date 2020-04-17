@@ -27,6 +27,15 @@ jobs:
     displayName: Create Anaconda environment
 
   - bash: |
+      pip install pipreqs
+      pipreqs $(Build.Repository.LocalPath)
+    displayName: Install pipreqs and create requirements.txt
+
+  - bash: |
+      cat $(Build.Repository.LocalPath)/requirements.txt
+    displayName: Display requirements.txt
+
+  - bash: |
       source activate env-from-yaml
       pip install pytest pytest-azurepipelines
       pytest
