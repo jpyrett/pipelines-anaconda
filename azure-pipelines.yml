@@ -45,6 +45,5 @@ jobs:
       pip install pytest pytest-azurepipelines
       pytest
     displayName: pytest
-    
-  - task: PythonScript@0  
-    -script: python src/example.py
+  
+  - script: python src/example.py
